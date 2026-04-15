@@ -190,27 +190,6 @@ button {
     background: rgba(20, 18, 23, 0.05);
 }
 
-.nav-link--cta {
-    background: var(--ink-inv);
-    color: var(--dark);
-    font-weight: 700;
-    padding-inline: 18px;
-}
-
-.nav-link--cta:hover {
-    background: var(--accent-inv);
-    color: var(--dark);
-}
-
-.pill-scrolled .nav-link--cta {
-    background: var(--ink);
-    color: var(--ink-inv);
-}
-
-.pill-scrolled .nav-link--cta:hover {
-    background: var(--accent);
-}
-
 .nav-logo {
     padding: 0 24px;
     white-space: nowrap;
@@ -406,10 +385,11 @@ button {
 
 .work-hero {
     position: relative;
+    min-height: 100svh;
     min-height: 100dvh;
-    padding: clamp(50px, 7vw, 90px) var(--px) clamp(72px, 10vw, 120px);
+    padding: clamp(92px, 10vw, 120px) var(--px) clamp(44px, 7vw, 72px);
     display: grid;
-    align-items: end;
+    align-items: center;
     overflow: hidden;
     background: radial-gradient(circle at top left, rgba(0, 212, 154, 0.11), transparent 34%), linear-gradient(180deg, #181722 0%, #141217 45%, #1D1B28 100%);
 }
@@ -923,8 +903,10 @@ button {
     }
 
     .work-hero {
-        min-height: auto;
-        padding-top: 112px;
+        min-height: 100svh;
+        min-height: 100dvh;
+        padding: 92px var(--px) 32px;
+        align-items: center;
     }
 
     .work-hero__title {
