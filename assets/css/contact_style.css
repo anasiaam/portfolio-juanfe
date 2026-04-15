@@ -176,27 +176,6 @@ button {
     background: rgba(20, 18, 23, 0.05);
 }
 
-.nav-link--cta {
-    background: var(--ink-inv);
-    color: var(--dark);
-    font-weight: 700;
-    padding-inline: 18px;
-}
-
-.nav-link--cta:hover {
-    background: var(--accent-inv);
-    color: var(--dark);
-}
-
-.pill-scrolled .nav-link--cta {
-    background: var(--ink);
-    color: var(--ink-inv);
-}
-
-.pill-scrolled .nav-link--cta:hover {
-    background: var(--accent);
-}
-
 .nav-logo {
     padding: 0 24px;
     white-space: nowrap;
@@ -391,6 +370,7 @@ button {
 
 .contact-hero {
     position: relative;
+    min-height: 100svh;
     min-height: 100dvh;
     padding: clamp(88px, 12vw, 132px) var(--px);
     display: grid;
@@ -669,8 +649,10 @@ button {
     }
 
     .contact-hero {
-        min-height: auto;
-        padding-top: 92px;
+        min-height: 100svh;
+        min-height: 100dvh;
+        padding: 92px var(--px) 32px;
+        align-items: center;
     }
 
     .ov-inner {
