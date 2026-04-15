@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover"/>
+    <title>Juanfe Nassar - Work</title>
+    <link rel="stylesheet" href="../assets/css/work_style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"/>
+</head>
+<body>
+
+<div class="c-dot" id="cDot"></div>
+<div class="c-ring" id="cRing"></div>
+
+<header class="nav" id="nav">
+    <div class="nav-pill" id="navPill">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="work.html" class="nav-link nav-link--active">Work</a>
+        <a href="../index.html" class="nav-logo" aria-label="Juanfe Nassar home">
+            <span class="nav-logo-text">Juanfe Nassar</span>
+        </a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#business-cards" class="nav-link nav-link--cta">Explore Work</a>
+    </div>
+    <div class="nav-mobile">
+        <a href="../index.html" class="nav-m-logo">Juanfe Nassar</a>
+        <button class="nav-m-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 32 18" fill="none" width="28" height="18">
+                <path d="M1 1H31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M1 9H31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M1 17H31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+    <div class="ov-curtain c1"></div>
+    <div class="ov-curtain c2"></div>
+    <div class="ov-inner">
+        <nav class="ov-nav">
+            <ul>
+                <li class="ov-item"><a href="../index.html" class="ov-a"><em class="ov-num">01</em><span class="ov-word">Home</span><span class="ov-arr">+</span></a></li>
+                <li class="ov-item"><a href="about.html" class="ov-a"><em class="ov-num">02</em><span class="ov-word">About</span><span class="ov-arr">+</span></a></li>
+                <li class="ov-item"><a href="work.html" class="ov-a"><em class="ov-num">03</em><span class="ov-word">Work</span><span class="ov-arr">+</span></a></li>
+                <li class="ov-item"><a href="contact.html" class="ov-a"><em class="ov-num">04</em><span class="ov-word">Contact</span><span class="ov-arr">+</span></a></li>
+            </ul>
+        </nav>
+        <aside class="ov-aside">
+            <div class="ov-aside-body" id="ovAsideBody">
+                <p class="ov-role">Creative Marketing Specialist<br/>New York, USA</p>
+                <div class="ov-rule"></div>
+                <p class="ov-meta">Design, photography, branding, and visual direction crafted with the same refined tone as the main site.</p>
+            </div>
+        </aside>
+    </div>
+    <div class="ov-foot">
+        <span>&copy; 2025 Juanfe Nassar</span>
+        <span>Selected Portfolio</span>
+    </div>
+</div>
+
+<main>
+    <section class="work-hero">
+        <div class="work-hero__texture" aria-hidden="true"></div>
+        <div class="work-hero__grid" aria-hidden="true"></div>
+        <div class="work-hero__inner">
+            <p class="eyebrow" data-reveal>Selected Work</p>
+            <h1 class="work-hero__title" data-reveal data-delay="120">
+                Design systems, print pieces, identity marks, and photography curated in one responsive archive.
+            </h1>
+            <p class="work-hero__body" data-reveal data-delay="220">
+                A flexible portfolio page built for mixed image formats, maintaining elegant rhythm from desktop to mobile.
+            </p>
+        </div>
+    </section>
+
+    <section class="portfolio-shell">
+        <div class="section-intro" data-scroll-reveal>
+            <p class="section-intro__kicker">Portfolio Archive</p>
+            <h2 class="section-intro__title">A responsive layout system for mixed orientation artwork.</h2>
+        </div>
+
+        <section class="portfolio-section" id="business-cards">
+            <div class="section-head" data-scroll-reveal>
+                <div>
+                    <p class="section-label">Business Cards</p>
+                </div>
+            </div>
+            <div class="work-grid" id="businessCardsGrid"></div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="section-head" data-scroll-reveal>
+                <div>
+                    <p class="section-label">Logos</p>
+                </div>
+            </div>
+            <div class="work-grid work-grid--compact" id="logosGrid"></div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="section-head" data-scroll-reveal>
+                <div>
+                    <p class="section-label">Other Designs</p>
+                </div>
+            </div>
+            <div class="work-grid work-grid--editorial" id="otherDesignsGrid"></div>
+        </section>
+
+        <section class="portfolio-section portfolio-section--photo">
+            <div class="section-head" data-scroll-reveal>
+                <div>
+                    <p class="section-label">Photography</p>
+                </div>
+            </div>
+
+            <div class="photo-carousel" data-carousel>
+                <div class="photo-carousel__topline" data-scroll-reveal>
+                    <div>
+                        <p class="photo-carousel__label">Carousel One</p>
+                    </div>
+                    <div class="photo-carousel__controls">
+                        <button class="car-arr" type="button" data-prev aria-label="Previous photography image">
+                            <svg viewBox="0 0 12 8" fill="none" width="14">
+                                <path d="M11 4H1M4 8L0 4 4 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="car-arr" type="button" data-next aria-label="Next photography image">
+                            <svg viewBox="0 0 12 8" fill="none" width="14">
+                                <path d="M1 4h10M8 0l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="photo-carousel__viewport">
+                    <div class="photo-carousel__track" id="photoCarouselOne"></div>
+                </div>
+            </div>
+
+            <div class="photo-carousel" data-carousel>
+                <div class="photo-carousel__topline" data-scroll-reveal>
+                    <div>
+                        <p class="photo-carousel__label">Carousel Two</p>
+                    </div>
+                    <div class="photo-carousel__controls">
+                        <button class="car-arr" type="button" data-prev aria-label="Previous photography image">
+                            <svg viewBox="0 0 12 8" fill="none" width="14">
+                                <path d="M11 4H1M4 8L0 4 4 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="car-arr" type="button" data-next aria-label="Next photography image">
+                            <svg viewBox="0 0 12 8" fill="none" width="14">
+                                <path d="M1 4h10M8 0l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="photo-carousel__viewport">
+                    <div class="photo-carousel__track" id="photoCarouselTwo"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer class="s-footer">
+    <div class="ft-grid">
+        <div class="ft-logo-col">
+            <p class="ft-name">Juanfe Nassar</p>
+            <p class="ft-tagline">Creative Marketing Specialist<br/>New York - 2025</p>
+        </div>
+        <div class="ft-nav-col">
+            <p class="ft-col-label">Navigate</p>
+            <a href="about.html" class="ft-link">About</a>
+            <a href="work.html" class="ft-link">Work</a>
+            <a href="contact.html" class="ft-link">Contact</a>
+        </div>
+        <div class="ft-nav-col">
+            <p class="ft-col-label">Collection</p>
+            <a href="#business-cards" class="ft-link">Business Cards</a>
+            <a href="#photoCarouselOne" class="ft-link">Photography</a>
+        </div>
+        <div class="ft-contact-col">
+            <p class="ft-col-label">Get in touch</p>
+            <a href="mailto:hello@juanfenassar.com" class="ft-contact-email">hello@juanfenassar.com</a>
+            <a href="contact.html" class="ft-contact-cta">
+                <span>Start a project</span>
+                <svg viewBox="0 0 12 8" fill="none" width="12">
+                    <path d="M1 4h10M8 0l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="ft-bottom">
+        <span>&copy; 2025 Juanfe Nassar. All rights reserved.</span>
+        <span class="ft-credit">Responsive portfolio experience</span>
+    </div>
+</footer>
+
+<div class="lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close image view">
+        <span></span>
+        <span></span>
+    </button>
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image view">
+        <img id="lightboxImage" src="" alt="Expanded portfolio image"/>
+    </div>
+</div>
+
+<script>
+    (() => {
+        const placeholderImage = (label, ratio = 1.5) => {
+            const safeLabel = encodeURIComponent(label);
+            const width = Math.round(1200 * Math.max(ratio, 0.7));
+            const height = 1200;
+            return `data:image/svg+xml;charset=UTF-8,` +
+                `%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${width} ${height}'%3E` +
+                `%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E` +
+                `%3Cstop stop-color='%23141217'/%3E%3Cstop offset='1' stop-color='%230C8C64'/%3E` +
+                `%3C/linearGradient%3E%3C/defs%3E` +
+                `%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E` +
+                `%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23F2EFE9' font-family='Arial, sans-serif' font-size='58' letter-spacing='6'%3E${safeLabel}%3C/text%3E` +
+                `%3C/svg%3E`;
+        };
+
+        const withFallback = (src, title, ratio) => ({
+            src,
+            fallback: placeholderImage(title, ratio),
+            title
+        });
+
+        const businessCards = [
+            { src: '../assets/images/business/business_cards/AH_business_card_page_1.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/AH_business_card_page_2.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/BN_business_card.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/BN_business_card_page_1.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/BN_business_card_page_2.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/Cape_Coral_membership_card_ver1.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/Cape_Coral_membership_card_ver2.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/DG_business_card_page_1.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/DG_business_card_page_2.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/Gutter_business_card.jpg', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_cards/Julian_business_card.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/sellisters_business_card.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/TrueCare_business_card_page_1.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/TrueCare_business_card_page_2.jpg', shape: 'landscape', ratio: 1.65 },
+            { src: '../assets/images/business/business_cards/yeni_business_card.jpg', shape: 'landscape', ratio: 1.65 }
+        ];
+
+        const logos = [
+            { src: '../assets/images/business/business_logos/AR_pools_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/Bonita_Family_Dentistry_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/BRANDTONE_BLUE_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/BRTM_logo.png', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_logos/DG_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/Fusion_logo_png.PNG', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_logos/GTO_logo.png', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_logos/Gutter_Revolution_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/howard_housing_logo_1.png', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/howard_housing_logo_2.png', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/howard_housing_logo_3.png', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/IMOVE_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/kick_start_academy_logo.jpg', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_logos/LA_logo_png.png', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_logos/Pro_Sports_Scouts_logo_png.png', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/Sellisters_International_logo.png', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/SELLISTERS_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/SWFL_logo.jpg', shape: 'square', ratio: 1 },
+            { src: '../assets/images/business/business_logos/Three_Bridges_logo.png', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/Vida_Painting_logo.jpg', shape: 'landscape', ratio: 1.6 },
+            { src: '../assets/images/business/business_logos/Vida_Painting_logo_png.png', shape: 'square', ratio: 1 }
+        ];
+
+        const otherDesigns = [
+            { src: '../assets/images/business/business_other/Content_Creation_1.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_2.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_3.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_4.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_5.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_6.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_7.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/Content_Creation_8.jpg', shape: 'portrait', ratio: 0.8 },
+            { src: '../assets/images/business/business_other/DG_magnet.jpg', shape: 'landscape', ratio: 1.55 },
+            { src: '../assets/images/business/business_other/dur_window_design_1.jpg', shape: 'landscape', ratio: 1.55 },
+            { src: '../assets/images/business/business_other/dur_window_design_2.png', shape: 'landscape', ratio: 1.55 },
+            { src: '../assets/images/business/business_other/dur_window_design_3.png', shape: 'landscape', ratio: 1.55 },
+            { src: '../assets/images/business/business_other/Other.jpg', shape: 'landscape', ratio: 1.55 },
+            { src: '../assets/images/business/business_other/Sellisters_picture_1.png', shape: 'landscape', ratio: 1.55 },
+            { src: '../assets/images/business/business_other/Sellisters_picture_2.png', shape: 'landscape', ratio: 1.55 }
+        ];
+
+        const photoCarouselOne = Array.from({length: 17}, (_, index) => {
+            const number = String(index + 1).padStart(2, '0');
+            const isLandscape = index >= 12;
+            return {
+                src: `../assets/images/photography/carousel_1/IMG_${number}.jpg`,
+                shape: isLandscape ? 'landscape' : 'portrait',
+                ratio: isLandscape ? 1.48 : 0.78
+            };
+        });
+
+        const photoCarouselTwo = [
+            { src: '../assets/images/photography/carousel_2/IMG_01.jpg', shape: 'portrait', ratio: 0.78 },
+            { src: '../assets/images/photography/carousel_2/IMG_02.jpg', shape: 'portrait', ratio: 0.78 },
+            { src: '../assets/images/photography/carousel_2/IMG_03.jpg', shape: 'portrait', ratio: 0.78 },
+            { src: '../assets/images/photography/carousel_2/IMG_04.jpg', shape: 'landscape', ratio: 1.48 }
+        ];
+
+        const gridTargets = [
+            {id: 'businessCardsGrid', items: businessCards, badge: 'Business Card'},
+            {id: 'logosGrid', items: logos, badge: 'Logo'},
+            {id: 'otherDesignsGrid', items: otherDesigns, badge: 'Design'}
+        ];
+
+        function getImageLabel(item, fallback) {
+            return item.title || item.alt || fallback;
+        }
+
+        function cardTemplate(item, badge, index) {
+            const label = getImageLabel(item, `${badge} ${index + 1}`);
+            const source = withFallback(item.src, label, item.ratio);
+            return `
+                <article class="work-card work-card--${item.shape}" style="--ratio:${item.ratio};" data-scroll-reveal>
+                    <button class="work-card__media" type="button" data-lightbox-trigger data-full-src="${source.src}" data-alt="${label}">
+                        <img src="${source.src}" alt="${label}" loading="lazy" data-fallback="${source.fallback}" />
+                    </button>
+                </article>
+            `;
+        }
+
+        function slideTemplate(item, index) {
+            const label = getImageLabel(item, `Photography ${index + 1}`);
+            const source = withFallback(item.src, label, item.ratio);
+            return `
+                <article class="photo-slide photo-slide--${item.shape}" style="--ratio:${item.ratio};">
+                    <button class="photo-slide__frame" type="button" data-lightbox-trigger data-full-src="${source.src}" data-alt="${label}">
+                        <img src="${source.src}" alt="${label}" loading="lazy" data-fallback="${source.fallback}" />
+                    </button>
+                </article>
+            `;
+        }
+
+        gridTargets.forEach(({id, items, badge}) => {
+            const target = document.getElementById(id);
+            if (target) target.innerHTML = items.map((item, index) => cardTemplate(item, badge, index)).join('');
+        });
+
+        const carouselOneEl = document.getElementById('photoCarouselOne');
+        const carouselTwoEl = document.getElementById('photoCarouselTwo');
+        if (carouselOneEl) carouselOneEl.innerHTML = photoCarouselOne.map((item, index) => slideTemplate(item, index)).join('');
+        if (carouselTwoEl) carouselTwoEl.innerHTML = photoCarouselTwo.map((item, index) => slideTemplate(item, index)).join('');
+
+        document.querySelectorAll('img[data-fallback]').forEach((img) => {
+            img.addEventListener('error', () => {
+                if (img.dataset.failed) return;
+                img.dataset.failed = 'true';
+                img.src = img.dataset.fallback;
+            }, {once: true});
+        });
+
+        const dot = document.getElementById('cDot');
+        const ring = document.getElementById('cRing');
+        let mx = -300;
+        let my = -300;
+        let rx = -300;
+        let ry = -300;
+
+        document.addEventListener('mousemove', (event) => {
+            mx = event.clientX;
+            my = event.clientY;
+            dot.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+        });
+
+        (function animateCursor() {
+            rx += (mx - rx) * 0.1;
+            ry += (my - ry) * 0.1;
+            ring.style.transform = `translate(${rx - 20}px, ${ry - 20}px)`;
+            requestAnimationFrame(animateCursor);
+        })();
+
+        document.querySelectorAll('a, button, .work-card, .photo-slide').forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                ring.classList.add('ring-big');
+                dot.classList.add('dot-sm');
+            });
+            element.addEventListener('mouseleave', () => {
+                ring.classList.remove('ring-big');
+                dot.classList.remove('dot-sm');
+            });
+        });
+
+        const pill = document.getElementById('navPill');
+        window.addEventListener('scroll', () => {
+            pill.classList.toggle('pill-scrolled', window.scrollY > 60);
+        }, {passive: true});
+
+        const menuButton = document.getElementById('mobileMenuBtn');
+        const overlay = document.getElementById('overlay');
+        const overlayItems = document.querySelectorAll('.ov-item');
+        const aside = document.getElementById('ovAsideBody');
+        let isMenuOpen = false;
+
+        const openOverlay = () => {
+            isMenuOpen = true;
+            overlay.classList.add('ov-open');
+            overlay.setAttribute('aria-hidden', 'false');
+            menuButton.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+            overlayItems.forEach((item, index) => {
+                item.style.transitionDelay = `${0.24 + index * 0.06}s`;
+                item.classList.add('ov-item-in');
+            });
+            if (aside) {
+                aside.style.transitionDelay = '.46s';
+                aside.classList.add('aside-in');
+            }
+        };
+
+        const closeOverlay = () => {
+            isMenuOpen = false;
+            document.body.style.overflow = '';
+            overlayItems.forEach((item) => {
+                item.style.transitionDelay = '0s';
+                item.classList.remove('ov-item-in');
+            });
+            if (aside) {
+                aside.style.transitionDelay = '0s';
+                aside.classList.remove('aside-in');
+            }
+            overlay.classList.add('ov-closing');
+            overlay.classList.remove('ov-open');
+            setTimeout(() => {
+                overlay.classList.remove('ov-closing');
+                overlay.setAttribute('aria-hidden', 'true');
+                menuButton.setAttribute('aria-expanded', 'false');
+            }, 700);
+        };
+
+        menuButton.addEventListener('click', () => {
+            if (isMenuOpen) closeOverlay();
+            else openOverlay();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && isMenuOpen) closeOverlay();
+        });
+
+        document.querySelectorAll('[data-reveal]').forEach((element) => {
+            setTimeout(() => element.classList.add('revealed'), Number(element.dataset.delay || 0) + 180);
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const delay = Number(entry.target.dataset.srDelay || 0);
+                setTimeout(() => entry.target.classList.add('sr-in'), delay);
+                revealObserver.unobserve(entry.target);
+            });
+        }, {threshold: 0.12});
+
+        document.querySelectorAll('[data-scroll-reveal]').forEach((element) => {
+            revealObserver.observe(element);
+        });
+
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+
+        function openLightbox(src, alt) {
+            lightboxImage.src = src;
+            lightboxImage.alt = alt || 'Expanded portfolio image';
+            lightbox.classList.add('lightbox--open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('lightbox-open');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('lightbox--open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('lightbox-open');
+            setTimeout(() => {
+                if (lightbox.classList.contains('lightbox--open')) return;
+                lightboxImage.src = '';
+            }, 220);
+        }
+
+        document.querySelectorAll('[data-lightbox-trigger]').forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+                openLightbox(trigger.dataset.fullSrc, trigger.dataset.alt);
+            });
+        });
+
+        lightboxClose?.addEventListener('click', closeLightbox);
+        lightboxBackdrop?.addEventListener('click', closeLightbox);
+
+        function initCarousel(carousel) {
+            const track = carousel.querySelector('.photo-carousel__track');
+            const prevButton = carousel.querySelector('[data-prev]');
+            const nextButton = carousel.querySelector('[data-next]');
+            if (!track) return;
+
+            let isPointerDown = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollAmount = () => {
+                const firstSlide = track.querySelector('.photo-slide');
+                if (!firstSlide) return 320;
+                const gap = parseFloat(getComputedStyle(track).gap || '0');
+                return firstSlide.getBoundingClientRect().width + gap;
+            };
+
+            prevButton?.addEventListener('click', () => {
+                track.scrollBy({left: -scrollAmount(), behavior: 'smooth'});
+            });
+
+            nextButton?.addEventListener('click', () => {
+                track.scrollBy({left: scrollAmount(), behavior: 'smooth'});
+            });
+
+            track.addEventListener('pointerdown', (event) => {
+                isPointerDown = true;
+                startX = event.clientX;
+                scrollLeft = track.scrollLeft;
+                track.classList.add('is-dragging');
+                track.setPointerCapture(event.pointerId);
+            });
+
+            track.addEventListener('pointermove', (event) => {
+                if (!isPointerDown) return;
+                const distance = event.clientX - startX;
+                track.scrollLeft = scrollLeft - distance;
+            });
+
+            const stopDragging = (event) => {
+                if (!isPointerDown) return;
+                isPointerDown = false;
+                track.classList.remove('is-dragging');
+                if (event?.pointerId !== undefined && track.hasPointerCapture(event.pointerId)) {
+                    track.releasePointerCapture(event.pointerId);
+                }
+            };
+
+            track.addEventListener('pointerup', stopDragging);
+            track.addEventListener('pointercancel', stopDragging);
+            track.addEventListener('pointerleave', stopDragging);
+        }
+
+        document.querySelectorAll('[data-carousel]').forEach(initCarousel);
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && lightbox.classList.contains('lightbox--open')) {
+                closeLightbox();
+            }
+        });
+    })();
+</script>
+</body>
+</html>
